@@ -1,4 +1,5 @@
-FROM registry.cn-hangzhou.aliyuncs.com/gcr2023/centos7:openjdk180
+FROM centos:7
+RUN yum install -y java-1.8.0-openjdk-1.8.0.262.b10-1.el7.x86_64
 USER root
 COPY wandisco-git-release-7-2.noarch.rpm ./
 RUN rpm -ivh wandisco-git-release-7-2.noarch.rpm
